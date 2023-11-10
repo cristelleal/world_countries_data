@@ -1,0 +1,81 @@
+@import url("variables.css");
+
+/*--------------------------------------------------------------
+   - FOUNDATION
+--------------------------------------------------------------*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::selection {
+  background-color: var(--color-n-100);
+  color: var(--color-n-000);
+}
+
+body {
+  color: var(--color-n-150);
+  font-family: var(--typography-typeface);
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+   - COMPONENTS
+--------------------------------------------------------------*/
+
+header {
+  background-color: var(--color-n-050);
+  padding: 1rem;
+  box-shadow: var(--box-shadow-light);
+}
+
+h2 {
+  color: var(--color-n-100);
+  font-size: var(--typography-h2);
+}
+
+.graph-buttons {
+  padding: 1.5rem;
+}
+
+button {
+  padding: var(--padding-regular-button);
+  background-color: var(--color-n-100);
+  border: none;
+  border-radius: 2%;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-n-100-hover);
+}
+
+.graph-title {
+  text-align: center;
+  margin-top: 0;  
+  font-size: var(--typography-h4);
+  font-weight: 200;
+}
+
+.graphs {
+  display: flex;
+  flex-direction: column;
+}
+
+.graph-wrapper {
+  padding: 2rem;
+}
+
+.box {
+  padding: 2rem;
+  background: var(--color-n-050);
+  box-shadow: var(--box-shadow-light);
+}
+
