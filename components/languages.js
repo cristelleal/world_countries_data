@@ -11,13 +11,28 @@ export function tenMostSpokenLanguages() {
     acc[language] = (acc[language] || 0) + 1;
     return acc;
   }, {});
-  
+
   const topTenLanguages = document.createElement("div");
   const languageArray = Object.entries(languageCounts);
   const sortedLanguages = languageArray.sort((a, b) => b[1] - a[1]);
   const sortedTenLanguages = sortedLanguages.slice(0, 10);
-  topTenLanguages.textContent = sortedTenLanguages;
+
+  for (const element of sortedTenLanguages) {
+    const languageElement = document.createElement("div");
+    languageElement.classList.add("language-item");
+
+    const progressBar = document.createElement("progress");
+    progressBar.value = element[1];
+    progressBar.max = 100;
+
+    languageElement.textContent = `${element[0]} `;
+    languageElement.style.margin = '0';
+    languageElement.appendChild(progressBar);
+    const useNumber = document.createTextNode(` ${element[1]}`);
+    languageElement.appendChild(useNumber);
+    topTenLanguages.appendChild(languageElement);
+  }
   container.appendChild(topTenLanguages);
-  
+
   return container;
 }

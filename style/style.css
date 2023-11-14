@@ -59,7 +59,7 @@ button:hover {
 
 .graph-title {
   text-align: center;
-  margin-top: 0;  
+  margin-top: 0;
   font-size: var(--typography-h4);
   font-weight: 200;
 }
@@ -74,8 +74,28 @@ button:hover {
 }
 
 .box {
-  padding: 2rem;
+  padding: 2rem 8rem 2rem 8rem;
   background: var(--color-n-050);
   box-shadow: var(--box-shadow-light);
 }
 
+.language-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+progress {
+  appearance: unset;
+  width: 50%;
+  height: 40px;
+  margin: 5px 15px 5px 15px;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--color-n-100);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--color-n-050);
+}
