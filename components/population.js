@@ -1,14 +1,12 @@
 import { countries_data } from "../data/countries_data.js";
+import { getTopTenCountries } from "../utils/utils.js";
 
 export function tenMostPopulatedCountries() {
   const container = document.createElement("div");
   container.classList.add("box");
   const countriesListContainer = document.createElement("div");
   countriesListContainer.classList.add("items-container");
-  const sortedPopulatedCountries = countries_data.sort(
-    (a, b) => b.population - a.population
-  );
-  const topTenCountries = sortedPopulatedCountries.slice(0, 10);
+  const topTenCountries = getTopTenCountries(countries_data);
   const worldPopulation = 8072797220;
   const worldPopulationElement = document.createElement("div");
   worldPopulationElement.classList.add("language-item");
