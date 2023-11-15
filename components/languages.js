@@ -13,6 +13,7 @@ export function tenMostSpokenLanguages() {
   }, {});
 
   const topTenLanguages = document.createElement("div");
+  topTenLanguages.classList.add("items-container");
   const languageArray = Object.entries(languageCounts);
   const sortedLanguages = languageArray.sort((a, b) => b[1] - a[1]);
   const sortedTenLanguages = sortedLanguages.slice(0, 10);
@@ -25,8 +26,9 @@ export function tenMostSpokenLanguages() {
     progressBar.value = element[1];
     progressBar.max = 100;
 
-    languageElement.textContent = `${element[0]} `;
-    languageElement.style.margin = '0';
+    const language = element[0];
+    languageElement.textContent = `${language} `;
+    languageElement.style.margin = "0";
     languageElement.appendChild(progressBar);
     const useNumber = document.createTextNode(` ${element[1]}`);
     languageElement.appendChild(useNumber);

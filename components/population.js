@@ -3,13 +3,13 @@ import { countries_data } from "../data/countries_data.js";
 export function tenMostPopulatedCountries() {
   const container = document.createElement("div");
   container.classList.add("box");
+  const countriesListContainer = document.createElement("div");
+  countriesListContainer.classList.add("items-container");
   const sortedPopulatedCountries = countries_data.sort(
     (a, b) => b.population - a.population
   );
   const topTenCountries = sortedPopulatedCountries.slice(0, 10);
-
   const worldPopulation = 8072797220;
-
   const worldPopulationElement = document.createElement("div");
   worldPopulationElement.classList.add("language-item");
 
@@ -22,7 +22,8 @@ export function tenMostPopulatedCountries() {
     worldPopulation.toLocaleString("en-US")
   );
 
-  container.appendChild(worldPopulationElement);
+  container.appendChild(countriesListContainer);
+  countriesListContainer.appendChild(worldPopulationElement);
   worldPopulationElement.appendChild(worldProgressBar);
   worldPopulationElement.appendChild(worldPopulationNumber);
 
@@ -49,7 +50,8 @@ export function tenMostPopulatedCountries() {
     const populationNumber = document.createTextNode(
       countryPopulation.toLocaleString("en-US")
     );
-    container.appendChild(topTenCountriesPopulation);
+    container.appendChild(countriesListContainer);
+    countriesListContainer.appendChild(topTenCountriesPopulation);
     topTenCountriesPopulation.appendChild(progressBar);
     topTenCountriesPopulation.appendChild(populationNumber);
   }
