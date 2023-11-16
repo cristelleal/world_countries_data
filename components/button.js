@@ -1,5 +1,3 @@
-import { tenMostSpokenLanguages } from "../components/languages.js";
-
 export function selectButton({
     selector,
     textContent,
