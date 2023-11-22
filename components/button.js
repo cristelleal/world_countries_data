@@ -1,11 +1,11 @@
-export function selectButton({
-    selector,
-    textContent,
-    onClick,
+export default function selectButton({
+  selector,
+  textContent,
+  onClick,
 }) {
   const button = document.querySelector(selector);
   button.textContent = textContent;
-  button.addEventListener("click", onClick);
+  button.addEventListener('click', onClick);
 
   return button;
 }

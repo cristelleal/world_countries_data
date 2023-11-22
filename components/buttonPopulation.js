@@ -1,16 +1,16 @@
-import { tenMostPopulatedCountries } from "../components/population.js";
-import { selectButton } from "./button.js";
+import tenMostPopulatedCountries from './population.js';
+import selectButton from './button.js';
 
-export function populationButton() {
-  const textContent = "Population".toUpperCase();
+export default function populationButton() {
+  const textContent = 'Population'.toUpperCase();
   selectButton({
-    selector: ".population",
+    selector: '.population',
     textContent,
-    onClick: function() {
-      const title = document.querySelector(".graph-title");
-      title.textContent = "10 Most populated countries in the world";
-      const graph = document.querySelector(".graphs");
-      graph.innerHTML = "";
+    onClick() {
+      const title = document.querySelector('.graph-title');
+      title.textContent = '10 Most populated countries in the world';
+      const graph = document.querySelector('.graphs');
+      graph.innerHTML = '';
       graph.appendChild(tenMostPopulatedCountries());
     },
   });

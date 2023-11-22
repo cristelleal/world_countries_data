@@ -1,5 +1,5 @@
-export function getLangagesCount(countries_data) {
-  const allLanguages = countries_data
+export function getLangagesCount(countriesData) {
+  const allLanguages = countriesData
     .map((country) => country.languages)
     .flat();
 
@@ -19,9 +19,9 @@ export function getTenMostSpokenLanguages(languageCounts) {
   return sortedTenLanguages;
 }
 
-export function getTopTenCountries(countries_data) {
-  const sortedPopulatedCountries = countries_data.sort(
-    (a, b) => b.population - a.population
+export function getTopTenCountries(countriesData) {
+  const sortedPopulatedCountries = countriesData.sort(
+    (a, b) => b.population - a.population,
   );
   const topTenCountries = sortedPopulatedCountries.slice(0, 10);
 
