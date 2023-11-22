@@ -1,16 +1,16 @@
-import { tenMostSpokenLanguages } from "../components/languages.js";
-import { selectButton } from "./button.js";
+import tenMostSpokenLanguages from './languages';
+import selectButton from './button';
 
-export function languagesButton() {
-  const textContent = "Languages".toUpperCase();
+export default function languagesButton() {
+  const textContent = 'Languages'.toUpperCase();
   selectButton({
-    selector: ".languages",
+    selector: '.languages',
     textContent,
-    onClick: function() {
-      const title = document.querySelector(".graph-title");
-      title.textContent = "10 Most spoken languages in the world";
-      const graph = document.querySelector(".graphs");
-      graph.innerHTML = "";
+    onClick() {
+      const title = document.querySelector('.graph-title');
+      title.textContent = '10 Most spoken languages in the world';
+      const graph = document.querySelector('.graphs');
+      graph.innerHTML = '';
       graph.appendChild(tenMostSpokenLanguages());
     },
   });

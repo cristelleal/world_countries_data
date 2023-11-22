@@ -1,7 +1,7 @@
-import { countries_data } from "../data/countries_data.js";
+import { countriesData } from '../data/countriesData';
 
-export function subtitle() {
-  const numberOfCountries = countries_data.length;
-  const subtitle = document.querySelector(".subtitle");
-  subtitle.textContent = `Currently, we have ${numberOfCountries} countries`;
+export default function subtitle() {
+  const numberOfCountries = countriesData.length;
+  const subtitlePart = document.querySelector('.subtitle');
+  subtitlePart.textContent = `Currently, we have ${numberOfCountries} countries`;
 }
