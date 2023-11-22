@@ -5,9 +5,13 @@
   "main": ".eslintrc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
     "eslint:verify": "eslint . --ext .js",
     "eslint:fix": "eslint . --ext .js --fix"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
 }

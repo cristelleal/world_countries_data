@@ -1,4 +1,4 @@
-import { countriesData } from '../data/countriesData.js';
+import { countriesData } from '../data/countriesData';
 
 export default function subtitle() {
   const numberOfCountries = countriesData.length;

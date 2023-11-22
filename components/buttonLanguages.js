@@ -1,5 +1,5 @@
-import tenMostSpokenLanguages from './languages.js';
-import selectButton from './button.js';
+import tenMostSpokenLanguages from './languages';
+import selectButton from './button';
 
 export default function languagesButton() {
   const textContent = 'Languages'.toUpperCase();

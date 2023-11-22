@@ -1,5 +1,5 @@
-import { countriesData } from '../data/countriesData.js';
-import { getLangagesCount, getTenMostSpokenLanguages } from '../utils/utils.js';
+import { countriesData } from '../data/countriesData';
+import { getLangagesCount, getTenMostSpokenLanguages } from '../utils/utils';
 
 export default function tenMostSpokenLanguages() {
   const container = document.createElement('div');

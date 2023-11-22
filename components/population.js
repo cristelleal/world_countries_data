@@ -1,5 +1,5 @@
-import { countriesData } from '../data/countriesData.js';
-import { getTopTenCountries } from '../utils/utils.js';
+import { countriesData } from '../data/countriesData';
+import { getTopTenCountries } from '../utils/utils';
 
 export default function tenMostPopulatedCountries() {
   const container = document.createElement('div');

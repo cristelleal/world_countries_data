@@ -1,5 +1,5 @@
-import tenMostPopulatedCountries from './population.js';
-import selectButton from './button.js';
+import tenMostPopulatedCountries from './population';
+import selectButton from './button';
 
 export default function populationButton() {
   const textContent = 'Population'.toUpperCase();
